@@ -49,6 +49,7 @@ jobs:
           poetry config virtualenvs.path venv
           source venv/bin/activate
           which python
+          poetry cache clear pypi --all
           poetry install --no-root
 
       - name: Compute pre-commit cache key
